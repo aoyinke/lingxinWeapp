@@ -1,0 +1,11 @@
+<navigator-custom title="流程详情"/>
+
+
+<view class="stepDetail">
+  <view>{{step}}</view>
+  <view>{{content}}</view>
+  <view>
+    <button bindtap="getFile">获取文件</button>
+  </view>
+  <view wx:if=""></view>
+</view>

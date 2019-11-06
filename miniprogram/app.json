@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/tuanwu/tuanwu",
+    "pages/problem/problem",
+    "pages/personal/personal",
+    "pages/buban/buban",
+    "pages/answer/answer",
+    "pages/liucheng/liucheng",
+    "pages/answer_show/answer_show",
+    "pages/liuchengDetail/liuchengDetail",
+    "pages/activity_show/activity_show",
+    "pages/learning/learning",
+    "pages/learning_detail/learning_detail",
+    "pages/detail/detail",
+    "pages/modify/modify",
+    "pages/personal_index/personal_index"
+  ],
+  "usingComponents": {
+    "navigator-custom": "../../components/navigator-custom/navigator-custom"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0000CD",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/tuanwu/tuanwu",
+        "text": "团务中心",
+        "iconPath": "/images/weibiaoti--.png",
+        "selectedIconPath": "/images/dangjianhuodong.png"
+      },
+      {
+        "pagePath": "pages/problem/problem",
+        "text": "提交问题",
+        "iconPath": "/images/wenti_1.png",
+        "selectedIconPath": "/images/wenti.png"
+      },
+      {
+        "pagePath": "pages/learning/learning",
+        "text": "学习干货",
+        "iconPath": "/images/xuexi.png",
+        "selectedIconPath": "/images/xuexi1.png"
+      },
+      {
+        "pagePath": "pages/activity_show/activity_show",
+        "text": "领新风采",
+        "iconPath": "/images/fengcai1.png",
+        "selectedIconPath": "/images/fengcai.png"
+      },
+      
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/images/geren.png",
+        "selectedIconPath": "/images/geren1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

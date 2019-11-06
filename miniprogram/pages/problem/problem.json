@@ -1,0 +1,21 @@
+{
+  "usingComponents": {
+    "van-field": "vant-weapp/field",
+    "van-divider": "vant-weapp/divider",
+    "van-transition": "vant-weapp/transition",
+    "van-search": "vant-weapp/search",
+    "van-dialog": "vant-weapp/dialog",
+    "van-button": "vant-weapp/button",
+    "van-picker": "vant-weapp/picker",
+    "van-popup": "vant-weapp/popup",
+    "van-panel": "vant-weapp/panel",
+    "van-sidebar": "vant-weapp/sidebar",
+    "van-sidebar-item": "vant-weapp/sidebar-item"
+    
+    
+
+  },
+  "navigationBarTitleText": "提交问题",
+  "navigationBarTextStyle": "white"
+  
+}

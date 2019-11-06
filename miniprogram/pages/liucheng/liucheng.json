@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-field": "vant-weapp/field",
+    "van-cell": "vant-weapp/cell",
+    "van-cell-group": "vant-weapp/cell-group",
+    "van-button": "vant-weapp/button",
+    "van-steps": "vant-weapp/steps"
+  },
+  "navigationBarTitleText": "入团流程",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#FF0000"
+}

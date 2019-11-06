@@ -1,0 +1,45 @@
+<navigator-custom title="我的主页"/>
+
+<view class="personalTitle">欢迎来到我的个人页</view>
+<view class="userImage">
+<open-data
+type = "userAvatarUrl" class="U_Image"></open-data>
+</view>
+
+<view class="personalDetail">
+<view class="username">
+用户名：
+<open-data type="userNickName"></open-data>
+</view>
+<view class="constellation">
+星座：
+<view>{{constellation}}</view>
+</view>
+<view class="qqNumber">
+QQ：
+<view>{{qqNumber}}</view>
+</view>
+<view class="phoneNumber">
+电话：
+<view>{{phoneNumber}}</view>
+</view>
+
+
+
+
+</view>
+
+
+<van-tabbar active="{{ active }}">
+  <van-tabbar-item info="4" icon="chat">
+    你提问的问题
+  </van-tabbar-item>
+  <van-tabbar-item icon="volume">我回答的问题</van-tabbar-item>
+  <van-tabbar-item icon="diamond" bindtap="changeToDetail" data-index="2">个人中心</van-tabbar-item>
+</van-tabbar>
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<navigator-custom title="个人资料修改"/>
+<form bindtap="formSubmit">
+  <view>
+    <view>姓名：</view>
+    <view>
+      <input type="text" name="username" value="{{username}}" placeholder="请输入姓名"></input>
+    </view>
+    <view>性别：</view>
+    <view>
+      <radio-group name="gender">
+        <label>
+          <radio value="男" checked="{{gender==='男'?'checked':''}}">男</radio>
+        </label>
+        <label>
+          <radio value="女" checked="{{gender==='女'?'checked':''}}">女</radio>
+        </label>
+      
+      </radio-group>
+    </view>
+    
+  
+  </view>
+  <button formType = "submit" type="primary">保存</button>
+</form>

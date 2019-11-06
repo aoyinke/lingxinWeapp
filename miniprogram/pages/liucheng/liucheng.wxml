@@ -1,0 +1,12 @@
+<navigator-custom title="入团流程"/>
+
+
+
+<van-steps
+  steps="{{ steps }}"
+  active="{{ active }}"
+  active-icon="success"
+  active-color="#38f"
+  direction="vertical"
+>
+</van-steps>

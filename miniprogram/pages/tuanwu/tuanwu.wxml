@@ -1,0 +1,34 @@
+<navigator-custom title="领新团务中心"/>
+
+<swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item class="slide-item">
+          <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+          </image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+<view class="menu">
+  <navigator url="../buban/buban" class="menu-item">
+    <image src="/images/tuanyuanzhengbuban.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">团员证补办</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/images/tuanhui.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">团员活动</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/images/tuanyuan.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">团员咨询</text>
+  </navigator>
+  <navigator url="../liucheng/liucheng" class="menu-item">
+    <image src="/images/rutuanshenqing.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">入团流程</text>
+  </navigator>
+</view>
+
+<view class="lingxin">
+  <view class="lingxin-head"><text>经济管理学院领新团总支</text></view>
+  <view class="lingxin-brief"><text>组织理念</text></view>
+</view>

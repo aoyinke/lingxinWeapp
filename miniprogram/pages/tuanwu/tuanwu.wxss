@@ -1,0 +1,141 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.swiperClass {
+  margin: 0;
+  height: 200px;
+  width: 100%;
+}
+
+
+.slide-image {
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+image.active {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+}  
+image.quiet {
+  transform: scale(0.8333333);
+  transition: all 0.2s ease-in 0s;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid gainsboro;
+}
+
+.menu-item {
+  width: 25%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /*把内边距计算到宽度中去*/
+  justify-content: center; /*左右居中*/
+}
+
+.menu-img {
+  width: 80%;
+}
+
+.menu-mc {
+  font-size: 14px;
+  align-self: center;
+}
+
+.message {
+  display: flex;
+  align-items: center; /*上中下居中*/
+  padding: 5px;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.msg-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.msg-text {
+  flex-grow:1;
+  overflow: hidden;   /*隐藏超出部分*/
+  white-space: nowrap;
+  text-overflow: ellipsis;   /*超出部分的文本用省略号表示*/ 
+}
+
+.msg-right {
+  width: 13px;
+  height: 13px;
+}
+
+
+
+.zhengjianzhao{
+  width:66%;
+  height: 66%;
+}
+.big-box{
+  background-color: #2C5CFF;
+}
+.navigator{
+  display: flex;
+  justify-content: center;
+  width: 750rpx;
+  position: fixed;
+  height: 120rpx;
+}
+.nav-image{
+height: 20px;
+width: 20px;
+}
+.navigator text{
+  color: #ffff;
+}
+
+.homepage{
+  height: 20px;
+  width:40px;
+  left: 0;
+  display: flex;
+  flex-wrap: unwrap;
+  margin-left: -650rpx;
+ 
+}
+
+.homepage image{
+  height: 20px;
+  width:20px;
+}
+
+.nav-title{
+  display: flex;
+  flex-wrap: unwrap;
+  margin-left: -25rpx;
+  position: fixed;
+}
+
+.lingxin{
+  margin: 40px 10px 10px 10px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.lingxin-head{
+  font-weight: 500;
+  font-size: 22px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  box-shadow: 10px 10px 5px #888888;
+}
+.lingxin-head text{
+  text-shadow: 10px 10px 5px 	#C0C0C0;
+}
+.lingxin-brief{
+  box-shadow: 10px 10px 5px #888888;
+  margin-top: 20px;
+  height: 200px;
+}

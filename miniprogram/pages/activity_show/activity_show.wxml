@@ -1,0 +1,31 @@
+<navigator-custom title="领新风采"/>
+<view class="changeTab">
+  <view class="tab-item {{item==0 ? 'active':''}}" bindtap="changeItem" data-item="0">风采展示</view>
+  <view class="tab-item {{item==1 ? 'active':''}}" bindtap="changeItem" data-item="1">领新小课堂</view>
+</view>
+<swiper current="{{item}}">
+  <swiper-item>
+  <scroll-view class="content-info" scroll-y>
+    <view class="exhibition-title">
+      <text>年时系马醉流霞</text>
+    </view>
+    <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item class="slide-item">
+          <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+          </image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+
+    
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <include src="lesson.wxml" />
+  </swiper-item>
+</swiper>
+
+<image class="bg" src="/images/bg_1.png"></image>

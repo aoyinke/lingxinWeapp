@@ -1,0 +1,29 @@
+<navigator-custom title="学习干货" />
+<view class="tab">
+  <view class="tab-item {{item==0? 'active':''}}" bindtap="changeItem" data-item="0">高数</view>
+  <view class="tab-item {{item==1? 'active':''}}" bindtap="changeItem" data-item="1">英语</view>
+  <view class="tab-item {{item==2? 'active':''}}" bindtap="changeItem" data-item="2">线代</view>
+  <view class="tab-item {{item==3? 'active':''}}" bindtap="changeItem" data-item="3">TOELF</view>
+</view>
+<view class="content" >
+  <swiper current="{{item}}">
+    <swiper-item class="mathematics">
+      <view class="learning">
+        <view class="learning-subject">
+          <image src="../../images/高等数学.jpg"></image>
+        </view>
+        <view class="learning-title">
+          <text>高等数学（大一上下全)\n</text>
+          <text class="learning-content">·内有学习资料\n·学习经验分享</text>
+        </view>
+        <navigator url="../../pages/learning_detail/learning_detail" class="learning-check">
+          <van-button type="info">查看详情</van-button>
+        </navigator>
+      </view>
+    </swiper-item>
+    <swiper-item>English</swiper-item>
+    <swiper-item>xiandai</swiper-item>
+    <swiper-item>TOELF</swiper-item>
+  </swiper>
+
+</view>

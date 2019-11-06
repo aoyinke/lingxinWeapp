@@ -1,0 +1,151 @@
+.search{
+  margin-bottom: 20px;
+  display: block;
+}
+.swiperClass {
+  width: 100%;
+  height: 650rpx;
+  right: -130px;
+  position: relative;
+}
+
+.exhibition-title{
+  font-size: 22px;
+  font-weight: bold;
+  height: 50px;
+  text-align: center;
+  text-shadow: 5px 5px 5px	#DC143C; 
+  box-shadow: 10px 10px 5px grey;
+  margin: 40px 10px 10px 80px;
+  width: 60%
+}
+
+.slide-image {
+  width: 60%;
+  height: 90%;
+  border-radius: 10px;
+  position: relative;
+}
+image.active {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+}  
+image.quiet {
+  transform: scale(0.8333333);
+  transition: all 0.2s ease-in 0s;
+}
+
+.problem_submit{
+  margin-top: 5px;
+}
+
+
+.problem{
+  margin-top: 30px;
+  height: 200px;
+  min-height: 2rem;
+}
+
+
+.problem_button{
+  height: 60px;
+  display: flex;
+}
+.submit{
+  bottom: 0px;
+  width:50%;
+}
+
+.delete{
+  bottom: 0px;
+  right: 0;
+  width: 50%;
+  
+
+}
+
+
+.picker{
+  margin-top:10px;
+}
+.picker-tip{
+  font-weight: bold;
+  text-shadow: 5px 5px 5px grey;
+  font-size: 22px;
+}
+
+.popUp{
+  height: 60px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 100px;
+  width: 114px;
+}
+
+.problem-cat{
+  background: gray;
+  color: #ffff;
+  line-height: 60px;
+  box-shadow: 10px 10px 5px #888888;
+  margin-top: 50px;
+}
+
+.problem-cat image{
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.problem-cat text{
+  font-size: 22px;
+  text-shadow: 5px 5px 5px #E6E6FA;
+  
+
+}
+
+.showInput{
+  position: absolute;
+  display: inline-block;
+  width: 114px;
+  height: 60px;
+  margin-top: 250px;
+  background-color: #FAFAD2;
+  box-shadow: 10px 10px 5px #888888;
+  line-height: 60px;
+
+}
+.showInput image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.showInput text{
+  font-size: 22px;
+  text-shadow: 5px 5px 5px #E6E6FA;
+}
+
+.problemCenter{
+  background-color: 	#D8BFD8;
+  color: 	#F5FFFA;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid gold;
+
+}
+
+.problemCenter text{
+  overflow:hidden; 
+  white-space:nowrap; 
+}
+.submitContent{
+  margin: 10px 0px 10px 0px;
+}
+.problemCatgeory{
+  color:		#BC8F8F;
+  font-size:23px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 5px 5px 5px #FFFFFF;
+}
+
+.answer-question{
+  display: inline-block;
+}

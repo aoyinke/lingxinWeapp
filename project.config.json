@@ -1,0 +1,146 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"appid": "wx9a27842ce15e1186",
+	"projectname": "%E9%A2%86%E6%96%B0%E5%9B%A2%E6%80%BB%E6%94%AF",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 13,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/problem/problem",
+					"pathName": "pages/problem/problem",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tuanwu/tuanwu",
+					"pathName": "pages/tuanwu/tuanwu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/buban/buban",
+					"pathName": "pages/buban/buban",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/personal/personal",
+					"pathName": "pages/personal/personal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/problemcenter/problemcenter",
+					"pathName": "pages/problemcenter/problemcenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/answer/answer",
+					"pathName": "pages/answer/answer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/answer/answer",
+					"pathName": "pages/answer/answer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/liucheng/liucheng",
+					"pathName": "pages/liucheng/liucheng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/answer_show/answer_show",
+					"pathName": "pages/answer_show/answer_show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/learning/learning",
+					"pathName": "pages/learning/learning",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/activity_show/activity_show",
+					"pathName": "pages/activity_show/activity_show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/personal_index/personal_index",
+					"pathName": "pages/personal_index/personal_index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

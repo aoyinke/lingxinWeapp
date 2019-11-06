@@ -1,0 +1,23 @@
+<navigator-custom title="团员证补办"/>
+
+<van-cell-group class="personalInfo">
+  <van-field value="{{ username }}" required clearable label="行政班级" icon="question-o" placeholder="请输入行政班级" bind:click-icon="onClickIcon" />
+
+  <van-field value="{{ password }}" label="姓名" placeholder="请输入姓名" required border="{{ false }}" />
+  <van-field value="{{ password }}" label="联系方式" placeholder="请输入联系方式" required border="{{ false }}" />
+  <van-field value="{{ password }}" label="学号" placeholder="请输入学号" required border="{{ false }}" />
+</van-cell-group>
+
+<van-cell-group>
+  <van-cell title="提交电子证件照" value="电子证件照" />
+</van-cell-group>
+<view>
+  <image wx:for="{{images}}" src="{{item}}" wx:key="{{index}}"
+  class="zhengjianzhao"></image>
+</view>
+
+<van-button type="info" bindtap="uploadImage" color="linear-gradient(to right, #4bb0ff, #6149f6)" icon="success" size="large">提交照片</van-button>
+
+<van-button type="info"  icon="success" 
+size="large"bindtap = "submit"
+color="linear-gradient(to right, 	#DC143C, 	#1E90FF)">提交信息</van-button>

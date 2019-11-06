@@ -1,0 +1,29 @@
+<navigator-custom title="回答问题"/>
+
+<van-cell-group class = "problem_show">
+  <van-cell title="{{ type }}" value="{{type}}" 
+  label="问题是：\n{{ problem }}" 
+  border="{{ false }}" />
+  
+</van-cell-group>
+
+
+<van-cell-group class="problem_answer" >
+  <van-field
+    value="{{ message }}"
+    label="回答问题"
+    type="textarea"
+    placeholder="请回答问题"
+    autosize
+    border="{{ false }}"
+    bind:change="answerQuestion"
+  />
+</van-cell-group>
+
+
+
+<navigator url="../answer_show/answer_show?problemId={{problemId}}">
+<van-button plain hairline type="info" size="large" bindtap="submit">提交回答
+</van-button>
+</navigator>
+

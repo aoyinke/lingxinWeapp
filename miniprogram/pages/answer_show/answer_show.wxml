@@ -1,0 +1,9 @@
+<navigator-custom title="问题展示"/>
+
+<block wx:for="{{answers}}" wx:key="{{index}}">
+<view class="answer">
+<view class="answer-type"><text >问题类别：{{item.type}}</text>   <text class="time">提问时间：{{item.time}}</text></view>
+<view class="answer-question"><text >回答的内容:{{item.answerQuestion}}</text>
+</view>
+</view>
+</block>

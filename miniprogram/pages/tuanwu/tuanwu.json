@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-notice-bar": "vant-weapp/notice-bar"
+   
+  },
+  "navigationBarTitleText": "领新团务中心",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#FF0000"
+}
