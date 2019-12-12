@@ -1,0 +1,6 @@
+.bottom{
+  text-align: center;
+  font-size: 40rpx;
+  color: 	#00BFFF;
+  border-bottom: 2px solid 	#DCDCDC;
+}

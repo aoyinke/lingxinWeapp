@@ -1,26 +1,26 @@
-<navigator-custom title="领新团务中心"/>
+<navigator-custom title="领新团务中心" />
 
-<swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
-      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-        <swiper-item class="slide-item">
-          <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
-          </image>
-        </swiper-item>
-      </block>
-    </swiper>
+<swiper class='swiperClass'  autoplay indicator-color="#a39f99" indicator-active-color="#f49641" interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item class="slide-item">
+      <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+      </image>
+    </swiper-item>
+  </block>
+</swiper>
 
 <view class="menu">
   <navigator url="../buban/buban" class="menu-item">
     <image src="/images/tuanyuanzhengbuban.png" mode="widthFix" class="menu-img"></image>
     <text class="menu-mc">团员证补办</text>
   </navigator>
-  <navigator url="" class="menu-item">
-    <image src="/images/tuanhui.png" mode="widthFix" class="menu-img"></image>
-    <text class="menu-mc">团员活动</text>
+  <navigator url="../tuanwu_consult/tuanwu_consult" class="menu-item" bindtap="naviToActivity">
+    <image src="/images/tuanhui.png" mode="widthFix" class="menu-img fengcai" style="height:120rpx;"></image>
+    <text class="menu-mc">团务咨询</text>
   </navigator>
-  <navigator url="" class="menu-item">
-    <image src="/images/tuanyuan.png" mode="widthFix" class="menu-img"></image>
-    <text class="menu-mc">团员咨询</text>
+  <navigator url="../activity_show/activity_show" class="menu-item" bindtap="naviToActivity">
+    <image src="/images/huodong.png" mode="widthFix" class="menu-img fengcai" style="height:120rpx;"></image>
+    <text class="menu-mc">领新风采</text>
   </navigator>
   <navigator url="../liucheng/liucheng" class="menu-item">
     <image src="/images/rutuanshenqing.png" mode="widthFix" class="menu-img"></image>
@@ -28,7 +28,19 @@
   </navigator>
 </view>
 
-<view class="lingxin">
-  <view class="lingxin-head"><text>经济管理学院领新团总支</text></view>
-  <view class="lingxin-brief"><text>组织理念</text></view>
+
+<view class="bottom" style="margin-top:400rpx;">
+  <text>推陈出新，携手并进</text>
+  <bottom-title class="bottom-title" />
 </view>
+<van-cell title="展示弹出层" is-link bind:click="showPopup" />
+
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+  <view style="text-align:center;font-weight:bold;font-size:42rpx;text-shadow: 5px 5px 5px #FFFFE0;">
+    <text>领新祝你使用愉快~小海豹们</text>
+  </view>
+  <view class="lingxinlogo">
+    <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/74bb7de81dbcc9c8d5e7869c6f618e9.png?sign=5c9f43b5e1c938bee24a430ce5e53753&t=1573970756"></image>
+  </view>
+  <button open-type="getUserInfo" type="primary" bindtap="handleAuthoration">确认授权</button>
+</van-popup>

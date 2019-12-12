@@ -1,0 +1,31 @@
+.title{
+  font-weight: bold;
+  border-bottom: 1px solid 	#808080;
+}
+.line{
+  border-bottom: 1px solid 	#808080;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+.content{
+  width: 60%;
+}
+.pailie-title{
+  margin-left: 40rpx;
+  text-align: center;
+}
+.pailie-content{
+  font-size: 26rpx;
+  color: #808080;
+  margin: 20rpx 0;
+}
+
+.bottom{
+  text-align: center;
+  font-size: 40rpx;
+  color: 	#00BFFF;
+}

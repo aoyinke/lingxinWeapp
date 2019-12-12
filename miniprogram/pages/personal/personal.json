@@ -4,7 +4,8 @@
       "van-tabbar": "vant-weapp/tabbar",
       "van-tabbar-item": "vant-weapp/tabbar-item",
       "van-icon": "vant-weapp/icon",
-      "navigator-custom":"../../components/navigator-custom/navigator-custom"
+      "navigator-custom":"../../components/navigator-custom/navigator-custom",
+      "van-button": "vant-weapp/button"
   },
   "navigationBarTitleText":"个人中心",
   "navigationBarTextStyle":"white",

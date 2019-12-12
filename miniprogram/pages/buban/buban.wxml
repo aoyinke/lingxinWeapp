@@ -1,23 +1,33 @@
-<navigator-custom title="团员证补办"/>
-
-<van-cell-group class="personalInfo">
-  <van-field value="{{ username }}" required clearable label="行政班级" icon="question-o" placeholder="请输入行政班级" bind:click-icon="onClickIcon" />
-
-  <van-field value="{{ password }}" label="姓名" placeholder="请输入姓名" required border="{{ false }}" />
-  <van-field value="{{ password }}" label="联系方式" placeholder="请输入联系方式" required border="{{ false }}" />
-  <van-field value="{{ password }}" label="学号" placeholder="请输入学号" required border="{{ false }}" />
-</van-cell-group>
-
-<van-cell-group>
-  <van-cell title="提交电子证件照" value="电子证件照" />
-</van-cell-group>
-<view>
-  <image wx:for="{{images}}" src="{{item}}" wx:key="{{index}}"
-  class="zhengjianzhao"></image>
+<navigator-custom title="团员证补办" />
+<view class="bubanTitle">
+  <text>团员证补办申请</text>
 </view>
-
-<van-button type="info" bindtap="uploadImage" color="linear-gradient(to right, #4bb0ff, #6149f6)" icon="success" size="large">提交照片</van-button>
-
-<van-button type="info"  icon="success" 
-size="large"bindtap = "submit"
-color="linear-gradient(to right, 	#DC143C, 	#1E90FF)">提交信息</van-button>
+<view class="logo">
+  <image src="../../images/lingxin.jpg"></image>
+  <image src="../../images/title.png"></image>
+</view>
+<view class="formSubmit">
+  <form bindsubmit="formsubmit" report-submit="true">
+    <view class="section">
+      <view class="section__title">申请人姓名</view>
+      <input name="stuName" placeholder="请输入你的姓名" value='{{form_info}}'/>
+    </view>
+    <view class="section">
+      <view class="section__title">申请人专业班级</view>
+      <input name="classInfo" placeholder="请输入专业班级（如管理191）" maxlength="3" value='{{form_info}}'/>
+    </view>
+    <view class="section">
+      <view class="section__title">申请人电话</view>
+      <input name="contact" placeholder="请输入联系方式" maxlength="12" type="number" value='{{form_info}}'/>
+    </view>
+    <view class="section">
+      <view class="section__title">申请人微信</view>
+      <input name="weixin" placeholder="请输入微信" value='{{form_info}}'/>
+    </view>
+    <view class="section">
+      <view class="section__title" style="text-align:center">团员证丢失原因</view>
+      <textarea placeholder-style="color:gray;" placeholder="请输入丢失原因" auto-focus bindinput="losingReason" value='{{form_info}}'/>
+    </view>
+    <button form-type="submit" report-submit type="primary">提交信息</button>
+  </form>
+</view>

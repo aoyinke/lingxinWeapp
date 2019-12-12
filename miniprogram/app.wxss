@@ -1,11 +1,45 @@
 /**app.wxss**/
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  color:#ffffff;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color:#FFFFFF;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color:#39b54a;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
 } 
+.iconfont{
+  font-family: "iconfont" !important;
+  font-size: 32rpx;
+  font-style: normal;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:grayscale;
 
+}
+.my-text{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 button {
   background: initial;
 }
@@ -20,10 +54,11 @@ button::after{
 
 
 page {
-  background: #f6f6f6;
+  background:		#F0F8FF;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font-family: SimSun;
 }
 
 .userinfo, .uploader, .tunnel {

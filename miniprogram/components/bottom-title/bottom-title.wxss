@@ -1,0 +1,11 @@
+.bottom-title{
+  display: flex;
+  justify-content: center;
+}
+
+image{
+
+  width: 80%;
+  height: 80rpx;
+  border-top: 1px solid #ffff;
+}

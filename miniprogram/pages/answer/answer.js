@@ -7,35 +7,104 @@ Page({
    * 页面的初始数据
    */
   data: {
+    openid:'',
     problem:'',
     type:'',
     problemId:'',
     answerQuestion:'',
-    time: myDate.toLocaleString()
+    time: myDate.toLocaleDateString() + myDate.toLocaleTimeString(), //获取当前时间
+    tempFilePaths:[]
 
+  },
+  /**
+   * 上传图片
+   */
+  uploadImg:function(e){
+    var that = this;
+    wx.chooseImage({
+      count: 4,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        const tempFilePaths = res.tempFilePaths
+          that.setData({
+            tempFilePaths: tempFilePaths
+          })
+        
+      }
+    })
   },
   answerQuestion:function(e){
     this.setData({
-      answerQuestion:e.detail
+      answerQuestion:e.detail.value
     })
     
   },
-
-  submit:function(){
-    db.collection('answerQuestion').add({
-      data:{
-        type:this.data.type,
-        answerQuestion:this.data.answerQuestion,
-        problemId:this.data.problemId,
-        time:this.data.time
+  getOpenid:function(e){
+    var that = this
+    wx.cloud.callFunction({
+      name:"login",
+      data:{},
+      success:res=>{
+        that.setData({
+          openid: res.result.openid
+        })
+        wx.getUserInfo({
+          success:res=>{
+            var userInfo = res.userInfo
+            var nickName = userInfo.nickName
+            var avatarUrl = userInfo.avatarUrl
+            var gender = userInfo.gender //性别 0：未知、1：男、2：女
+            var province = userInfo.province
+            var city = userInfo.city
+            var country = userInfo.country
+            console.log(nickName)
+            console.log(avatarUrl)
+          }
+        })
+        
+      },
+      fali:err=>{
+        console.error(err)
       }
     })
+  },
+  submit:function(){
+    
+    if (this.data.answerQuestion && this.data.tempFilePaths[0]){
+      db.collection('answerQuestion').add({
+        data: {
+          type: this.data.type,
+          answerQuestion: this.data.answerQuestion,
+          problemId: this.data.problemId,
+          time: this.data.time,
+          openid:this.data.openid,
+          tempFilePaths: this.data.tempFilePaths
+        }
+      })
+      wx.navigateTo({
+        url: `../answer_show/answer_show?problemId=${this.data.problemId}`,
+        success:res=>{
+          wx.showToast({
+            title: '跳转到问题展示界面~',
+            icon:"success"
+          })
+        }
+      })
+      
+    }else{
+      wx.showToast({
+        title: '回答的问题不能为空~',
+        icon:'none'
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     wx.showToast({
       title: '加载中',
       icon:'loading',
@@ -43,7 +112,8 @@ Page({
     })
     this.setData({
       problem:options.problem,
-      type: options.problemtype
+      type: options.problemtype,
+      problemId:options.problemId
 
     })
   

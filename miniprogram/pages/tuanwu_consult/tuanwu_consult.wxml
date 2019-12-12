@@ -1,0 +1,21 @@
+<navigator-custom title="团务咨询"></navigator-custom>
+<view style="margin-top:30rpx;"></view>
+
+<view class="tuanwuConsult">
+  <view class="consultTitle">团务咨询人员</view>
+  <view class="ps">此处可以在备注需求后，加QQ咨询人事部成员</view>
+  <block wx:for="{{managers}}" wx:key="{{index}}">
+    <view class="managerContainer">
+      <view class="leftarea">
+        <view class="managerImg">
+          <image src="{{item.managerImg}}"></image>
+        </view>
+      </view>
+      <view class="rightarea">
+        <view class="poistionName" style="font-weight:bold;">{{item.poisition}}</view>
+        <view class="managerName">{{item.name}}</view>
+        <view class="contactway">QQ:{{item.contactway}}</view>
+      </view>
+    </view>
+  </block>
+</view>

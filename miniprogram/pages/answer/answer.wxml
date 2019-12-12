@@ -1,29 +1,22 @@
-<navigator-custom title="回答问题"/>
+<navigator-custom title="回答问题" />
+<bottom-title/>
+<van-cell-group class="problem_show">
+  <van-cell title="{{ type }}" value="{{type}}" label="问题是：\n{{ problem }}" border="{{ false }}" />
 
-<van-cell-group class = "problem_show">
-  <van-cell title="{{ type }}" value="{{type}}" 
-  label="问题是：\n{{ problem }}" 
-  border="{{ false }}" />
-  
 </van-cell-group>
 
 
-<van-cell-group class="problem_answer" >
-  <van-field
-    value="{{ message }}"
-    label="回答问题"
-    type="textarea"
-    placeholder="请回答问题"
-    autosize
-    border="{{ false }}"
-    bind:change="answerQuestion"
-  />
-</van-cell-group>
+<view>
+  <textarea bindinput="answerQuestion" placeholder="请输入你的回答" class="answerQuestion" bindtap="getOpenid"></textarea>
+</view>
+
+<view class="uploadImg" bindtap="uploadImg">
+  <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/%E4%B8%8B%E8%BD%BD.jpg?sign=20b81c57579186979b2c4cbd8d6f0f29&t=1574178785" style="height:150rpx;width:150rpx;"></image>
+  <view>上传照片</view>
+</view>
 
 
-
-<navigator url="../answer_show/answer_show?problemId={{problemId}}">
-<van-button plain hairline type="info" size="large" bindtap="submit">提交回答
-</van-button>
-</navigator>
-
+<view>
+  <van-button plain hairline type="info" size="large" bindtap="submit">提交回答
+  </van-button>
+</view>

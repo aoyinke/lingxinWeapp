@@ -1,11 +1,14 @@
 <navigator-custom title="流程详情"/>
-
+  <view class="bg">
+  </view>
 
 <view class="stepDetail">
-  <view>{{step}}</view>
-  <view>{{content}}</view>
-  <view>
-    <button bindtap="getFile">获取文件</button>
+  <view class="step">{{step}}</view>
+
+  <view class="content">{{content}}</view>
+  <view class="file">
+    <view class="filename">{{fileContent}}</view>
+    <van-button bindtap="getFile" type="info" size="large" style="width:100%;">获取文件</van-button>
   </view>
   <view wx:if=""></view>
 </view>

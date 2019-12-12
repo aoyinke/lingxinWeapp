@@ -1,9 +1,26 @@
-<navigator-custom title="问题展示"/>
+<navigator-custom title="问题展示" />
 
+<view style="margin-top:20rpx;"></view>
 <block wx:for="{{answers}}" wx:key="{{index}}">
-<view class="answer">
-<view class="answer-type"><text >问题类别：{{item.type}}</text>   <text class="time">提问时间：{{item.time}}</text></view>
-<view class="answer-question"><text >回答的内容:{{item.answerQuestion}}</text>
-</view>
-</view>
+  <view class="answer">
+    <view class="answer-type">
+      <text>问题类别：{{item.type}}</text>
+    </view>
+    <view class="pub_time">
+      <text>提问时间：{{item.time}}</text>
+    </view>
+
+    <view class="answer-question">
+      <image src="../../images/tuboshu.png" class="answer_image"></image>
+      <view class="question">{{item.answerQuestion}}</view>
+      <view>
+        <van-rate value="{{ value }}" icon="star" void-icon="star-o" bind:change="onChange" data-index="{{index}}"/>
+      </view>
+      <view>
+        <van-button plain type="info" size="large">查看回答详情</van-button>
+      </view>
+    </view>
+
+
+  </view>
 </block>

@@ -1,0 +1,30 @@
+<navigator-custom title="我要倾诉">
+</navigator-custom>
+<view class="bg">
+  <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/shuye.png?sign=f36f3a7c11b028973753a59bc2209d8e&t=1575021599"></image>
+</view>
+<view class="talk">
+  <view class="title">
+    <view>
+      <text>海大树洞</text>
+    </view>
+    <view>
+      <text>——每个人，都是一个树洞</text>
+    </view>
+  </view>
+  <view class="startToTalk">
+    <view class="mainContent" >
+      <textarea  placeholder="开始倾诉吧~" bindinput="handleInput" style="height:100%;width:100%;" value="{{value}}"/>
+    </view>
+    <view class="submitImg" bindtap="submitImg">
+      <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/Camera.png?sign=12a4690f0aa1d27f5002b9d72df6338a&t=1575024611"></image>
+
+    </view>
+    <view class="submit">
+      <van-button plain type="primary" bindtap="submit">扔进树洞</van-button>
+    </view>
+  </view>
+  <view class="imgShow">
+    <image src="{{item}}" wx:for="{{tempFilePaths}}" wx:key="{{index}}"></image>
+  </view>
+</view>

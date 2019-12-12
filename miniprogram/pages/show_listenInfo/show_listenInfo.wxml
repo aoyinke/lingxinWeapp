@@ -1,0 +1,21 @@
+<navigator-custom title="聆听" />
+
+<view class="bg">
+  <image src="../../images/leafs_border.jpg"></image>
+</view>
+<view style="margin-top:200rpx"></view>
+<swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots interval="2000" duration="2000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}rpx'
+  vertical="true">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+      </image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="mainContent">
+  <view class="mainContent-text">
+    <view>{{mainContent}}</view>
+  </view>
+</view>

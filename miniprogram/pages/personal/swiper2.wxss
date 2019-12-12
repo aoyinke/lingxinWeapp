@@ -1,0 +1,13 @@
+.section{
+  background-color: #fff;
+  margin: 40rpx;
+  border: 2px solid #E6E6FA;
+}
+
+.advice-title view:first-child{
+  font-weight: bold;
+  font-size: 30rpx;
+  margin: 10rpx 0 10rpx 20rpx;
+  color: blue;
+
+}

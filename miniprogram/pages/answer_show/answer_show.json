@@ -3,7 +3,8 @@
     "van-cell": "vant-weapp/cell",
     "van-cell-group": "vant-weapp/cell-group",
     "van-field": "vant-weapp/field",
-    "van-button": "vant-weapp/button"
+    "van-button": "vant-weapp/button",
+    "van-rate": "vant-weapp/rate"
   },
   "navigationBarTitleText": "查看回答",
   "navigationBarTextStyle": "white",

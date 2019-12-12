@@ -1,29 +1,95 @@
 <navigator-custom title="学习干货" />
 <view class="tab">
-  <view class="tab-item {{item==0? 'active':''}}" bindtap="changeItem" data-item="0">高数</view>
-  <view class="tab-item {{item==1? 'active':''}}" bindtap="changeItem" data-item="1">英语</view>
-  <view class="tab-item {{item==2? 'active':''}}" bindtap="changeItem" data-item="2">线代</view>
-  <view class="tab-item {{item==3? 'active':''}}" bindtap="changeItem" data-item="3">TOELF</view>
+  <view class="tab-item {{item==0? 'active':''}}" bindtap="changeItem" data-item="0">各种试卷</view>
+  <view class="tab-item {{item==1? 'active':''}}" bindtap="changeItem" data-item="1">英语学习</view>
+  <view class="tab-item {{item==2? 'active':''}}" bindtap="changeItem" data-item="2">推荐电影</view>
+  <view class="tab-item {{item==3? 'active':''}}" bindtap="changeItem" data-item="3">新颖资料</view>
 </view>
-<view class="content" >
-  <swiper current="{{item}}">
-    <swiper-item class="mathematics">
-      <view class="learning">
-        <view class="learning-subject">
-          <image src="../../images/高等数学.jpg"></image>
+
+<view class="content" style="margin-top:80rpx;">
+  <swiper current="{{item}}" bindchange="handleChange">
+    <swiper-item class="test-paper">
+      <scroll-view scroll-y="true" upper-threshold="50" style="height: 100%;">
+        <view class="learning" wx:for="{{learning_resources}}" wx:key="{{index}}">
+          <view class="learning-subject">
+            <image src="{{item.subject_images}}"></image>
+          </view>
+          <view class="learning-info">
+            <view class="learning-title">
+              <text>{{item.subject}}</text>
+            </view>
+            <view class="resources">
+              <view>
+                <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/timg.gif?sign=3cae2dce422ae0d2b876d24fe6f7c7fa&t=1574846750"></image>
+              </view>
+
+            </view>
+            <van-button type="info" size="large" bindtap="handleClick" data-link="{{item.link}}">点击获取</van-button>
+          </view>
         </view>
-        <view class="learning-title">
-          <text>高等数学（大一上下全)\n</text>
-          <text class="learning-content">·内有学习资料\n·学习经验分享</text>
-        </view>
-        <navigator url="../../pages/learning_detail/learning_detail" class="learning-check">
-          <van-button type="info">查看详情</van-button>
-        </navigator>
-      </view>
+      </scroll-view>
     </swiper-item>
-    <swiper-item>English</swiper-item>
-    <swiper-item>xiandai</swiper-item>
-    <swiper-item>TOELF</swiper-item>
+    <swiper-item class="English">
+      <scroll-view scroll-y="true" upper-threshold="50" style="height: 100%;">
+        <view class="learning" wx:for="{{learning_English}}" wx:key="{{index}}">
+          <view class="learning-subject">
+            <image src="{{item.subject_images}}"></image>
+          </view>
+          <view class="learning-info">
+            <view class="learning-title">
+              <text>{{item.subject}}</text>
+            </view>
+            <view class="resources">
+              <view>
+                <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/timg.gif?sign=3cae2dce422ae0d2b876d24fe6f7c7fa&t=1574846750"></image>
+              </view>
+
+            </view>
+            <van-button type="info" size="large" bindtap="handleClick" data-link="{{item.link}}">点击获取</van-button>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class="movie">
+      <scroll-view scroll-y="true" upper-threshold="50" style="height: 100%;">
+        <view class="learning" wx:for="{{learning_movie}}" wx:key="{{index}}">
+          <view class="learning-subject">
+            <image src="{{item.subject_images}}"></image>
+          </view>
+          <view class="learning-info">
+            <view class="learning-title">
+              <text>{{item.subject}}</text>
+            </view>
+            <view class="resources">
+              <view>
+                <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/timg.gif?sign=3cae2dce422ae0d2b876d24fe6f7c7fa&t=1574846750"></image>
+              </view>
+            </view>
+            <van-button type="info" size="large" bindtap="handleClick" data-link="{{item.link}}">点击获取</van-button>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class="">
+      <scroll-view scroll-y="true" upper-threshold="50" style="height: 100%;">
+        <view class="learning" wx:for="{{learning_cailiao}}" wx:key="{{index}}">
+          <view class="learning-subject">
+            <image src="{{item.subject_images}}"></image>
+          </view>
+          <view class="learning-info">
+            <view class="learning-title">
+              <text>{{item.subject}}</text>
+            </view>
+            <view class="resources">
+              <view>
+                <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/timg.gif?sign=3cae2dce422ae0d2b876d24fe6f7c7fa&t=1574846750"></image>
+              </view>
+            </view>
+            <van-button type="info" size="large" bindtap="handleClick" data-link="{{item.link}}">点击获取</van-button>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
   </swiper>
 
 </view>

@@ -1,3 +1,18 @@
+bottom-title{
+  margin-top: 30rpx;
+}
 .problem_show{
   margin-bottom: 50px;
+}
+.answerQuestion{
+  margin: 10rpx;
+  border: 1px solid #FFE4C4;
+  background-color: #ffff;
+  width: 100%;
+}
+.uploadImg{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

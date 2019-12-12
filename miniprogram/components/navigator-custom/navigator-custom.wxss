@@ -7,7 +7,7 @@
   justify-content: center;
   width: 750rpx;
   position: absolute;
-  height: 150rpx;
+  height: 145rpx;
   z-index: 1
 }
 

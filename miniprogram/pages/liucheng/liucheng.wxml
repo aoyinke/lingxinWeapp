@@ -3,6 +3,7 @@
 
 
 <van-steps
+  class = "steps"
   steps="{{ steps }}"
   active="{{ active }}"
   active-icon="success"

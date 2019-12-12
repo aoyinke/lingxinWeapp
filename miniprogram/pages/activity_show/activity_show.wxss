@@ -1,9 +1,5 @@
-page{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+@import './lesson.wxss';
 
-}
 .bg{
   width: 100%;
   height: 100%;
@@ -14,19 +10,30 @@ page{
 
 .changeTab{
   display: flex;
-  background: #ffff;
+  background: #ffff !important;
   color: #17181a;
   font-size: 15pt;
-  line-height: 72rpx;
+  line-height: 90rpx;
   z-index: 1;
+  position: relative;
+  height: 90rpx;
+  margin-top: 20rpx;
+  background-color: #ffff;
 
+}
+.swiper-father{
+  height: 1500rpx;
 }
 swiper{
   height: 100%;
   z-index: 1;
+  position: relative;
 }
 .content-info{
   height: 100%;
+}
+.changeTab > view:first-child{
+  border-right: 1px solid #ccc;
 }
 .changeTab > view:last-child{
   border-left: 1px solid #ccc;
@@ -38,10 +45,13 @@ swiper{
 .tab-item{
     flex: 1;
     text-align: center;
+    background-color: #ffff;
+
 }
 .swiperClass {
   margin: 0;
-  height: 300px;
+  height: 200px;
+  position: relative;
 }
 
 .exhibition-title{
@@ -52,7 +62,9 @@ swiper{
   text-shadow: 5px 5px 5px	#DC143C; 
   box-shadow: 10px 10px 5px grey;
   margin: 40px 10px 10px 80px;
-  width: 60%
+  width: 60%;
+  position: relative;
+  line-height: 50px;
 }
 
 .slide-image {
@@ -71,10 +83,7 @@ image.quiet {
 }
 
 
-.container{
-  position: relative;
-  background-color: #000;
-}
+
 .content{
   position: relative;
   width:500rpx;
@@ -101,19 +110,115 @@ image.quiet {
   -o-animation:wordMove 50s both;
   animation:wordMove 50s both;
 }
-@keyframes wordMove {
-  0%{
-    top:100%;
-  }
-  100%{
-    top:-100%;
-  }
+
+.container{
+  margin:20rpx;
+  background-color: #fff;
+  border: 1px double #A9A9A9;
 }
-@-webkit-keyframes wordMove {
-  0%{
-    top:100%;
-  }
-  100%{
-    top:-100%;
-  }
+.lessontitle{
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.right-teacher{
+  height: 300rpx;
+  width: 60%;
+  right: 30rpx;
+  margin-top: 60rpx;
+  position: fixed;
+  
+
+}
+.lessonIntro{
+  display: inline-block;
+}
+.register{
+  display: flex;
+  width: 100%;
+}
+.register van-button{
+  width: 50% ;
+}
+.left-teacher{
+  width: 30%;
+  height: 100%;
+  border: 2px double #ccc;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: -470rpx;
+  
+}
+.grade{
+  color: gold;
+  font-size: 32rpx;
+}
+.teacherName{
+  left: 0;
+  position: relative;
+  font-weight: bold;
+}
+.teacherImg{
+  height: 200rpx;
+  width: 150rpx;
+  position: relative;
+}
+.teacherImg image{
+  height: 200rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  left: 0;
+  position: relative;
+}
+
+.lessonRoom{
+  color: 	#A9A9A9;
+  font-size: 22rpx;
+}
+.lessonTime{
+  color: 	#A9A9A9;
+  font-size: 22rpx;
+}
+.lastingTime{
+  color: 	#A9A9A9;
+  font-size: 22rpx;
+}
+.input{
+  display: flex;
+  justify-content: center;
+}
+.input input{
+  background-color: #fff;
+  margin: 20rpx 20rpx 20rpx 40rpx;
+  border: 2px solid #A9A9A9;
+  display: inline-block;
+  width: 70%;
+}
+.input image{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+.textarea{
+  background-color: #fff;
+  margin: 20rpx 20rpx 20rpx 40rpx;
+  border: 2px double #c25b5b;
+  
+}
+.uploadFile{
+  display: flex;
+  justify-content: center;
+  height: 150rpx;
+  width: 150rpx;
+  border:1px solid #A9A9A9;
+  margin: 20rpx;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 300rpx;
+}
+
+.uploadFile view{
+
+  font-weight: bold;
 }

@@ -7,7 +7,8 @@ Page({
   data: {
     step:'',
     content:'',
-    stepID:''
+    stepID:'',
+    fileContent:''
     
   },
 
@@ -21,8 +22,41 @@ Page({
       content:options.desc,
       stepID:options.dataId
     })
+    this.showFileContent()
   },
- 
+  /**
+   * 设置文件名称
+   */
+  showFileContent:function(){
+    let stepID = this.data.stepID
+    console.log(stepID)
+    if(stepID==0){
+      this.setFileName("谈话记录.docx")
+    } else if (stepID == 1){
+      this.setFileName("谈话记录.docx")
+    } else if (stepID == 2) {
+      this.setFileName("团章考试试卷及答案.doc")
+    } else if (stepID == 3) {
+      this.setFileName("谈话记录.docx")
+    } else if (stepID == 4) {
+      this.setFileName("谈话记录.docx")
+    } else if (stepID == 5) {
+      this.setFileName("谈话记录.docx")
+    } else if (stepID == 6) {
+      this.setFileName("谈话记录.docx")
+    } else if (stepID == 7) {
+      this.setFileName("谈话记录.docx")
+    } else if (stepID == 8) {
+      this.setFileName("谈话记录.docx")
+    }
+    
+    console.log(this.data.fileContent)
+  },
+  setFileName:function(name){
+    this.setData({
+      fileContent: name
+    })
+  },
   /**
    * 获取入团流程文件
    */
@@ -45,6 +79,11 @@ Page({
                 wx.openDocument({
                   filePath: savedFilePath,
                   success:res=>{
+                    wx.showToast({
+                      title: '文件下载中',
+                      icon:'success',
+                      duration:2000
+                    })
                     console.log('打开文档成功')
                   }
                 })

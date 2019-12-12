@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/tuanwu/tuanwu",
-    "pages/problem/problem",
     "pages/personal/personal",
     "pages/buban/buban",
     "pages/answer/answer",
@@ -12,11 +11,17 @@
     "pages/learning/learning",
     "pages/learning_detail/learning_detail",
     "pages/detail/detail",
-    "pages/modify/modify",
-    "pages/personal_index/personal_index"
+    "pages/personal_index/personal_index",
+    "pages/tuanwu_consult/tuanwu_consult",
+    "pages/register_lesson/register_lesson",
+    "pages/tree_hole/tree_hole",
+    "pages/talk_detail/talk_detail",
+    "pages/show_listenInfo/show_listenInfo",
+    "pages/instructor/instructor"
   ],
   "usingComponents": {
-    "navigator-custom": "../../components/navigator-custom/navigator-custom"
+    "navigator-custom": "../../components/navigator-custom/navigator-custom",
+    "bottom-title": "../../components/bottom-title/bottom-title"
   },
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -35,10 +40,10 @@
         "selectedIconPath": "/images/dangjianhuodong.png"
       },
       {
-        "pagePath": "pages/problem/problem",
-        "text": "提交问题",
-        "iconPath": "/images/wenti_1.png",
-        "selectedIconPath": "/images/wenti.png"
+        "pagePath": "pages/activity_show/activity_show",
+        "text": "领新风采",
+        "iconPath": "/images/fengcai1.png",
+        "selectedIconPath": "/images/fengcai.png"
       },
       {
         "pagePath": "pages/learning/learning",
@@ -47,12 +52,11 @@
         "selectedIconPath": "/images/xuexi1.png"
       },
       {
-        "pagePath": "pages/activity_show/activity_show",
-        "text": "领新风采",
-        "iconPath": "/images/fengcai1.png",
-        "selectedIconPath": "/images/fengcai.png"
+        "pagePath": "pages/tree_hole/tree_hole",
+        "text": "海大树洞",
+        "iconPath": "/images/shu.png",
+        "selectedIconPath": "/images/dashu.png"
       },
-      
       {
         "pagePath": "pages/personal/personal",
         "text": "我的",

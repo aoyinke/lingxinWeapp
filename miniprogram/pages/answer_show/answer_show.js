@@ -8,9 +8,18 @@ Page({
    */
   data: {
     problemId:'',
-    answers:[]
+    answers:[],
+    data: {
+      value: 3
+    }
   },
 
+  onChange(e) {
+    console.log(e.currentTarget.dataset.index)
+    this.setData({
+      value: e.detail
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

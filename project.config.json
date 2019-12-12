@@ -41,6 +41,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 13,
 			"list": [
@@ -138,6 +142,55 @@
 					"id": -1,
 					"name": "pages/personal_index/personal_index",
 					"pathName": "pages/personal_index/personal_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tuanwu_consult/tuanwu_consult",
+					"pathName": "pages/tuanwu_consult/tuanwu_consult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tuanwu_consult/tuanwu_consult",
+					"pathName": "pages/tuanwu_consult/tuanwu_consult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tree_hole/tree_hole",
+					"pathName": "pages/tree_hole/tree_hole",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/talk_detail/talk_detail",
+					"pathName": "pages/talk_detail/talk_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/show_listenInfo/show_listenInfo",
+					"pathName": "pages/show_listenInfo/show_listenInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/instructor/instructor",
+					"pathName": "pages/instructor/instructor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/jitang/jitang",
+					"pathName": "pages/jitang/jitang",
 					"scene": null
 				}
 			]

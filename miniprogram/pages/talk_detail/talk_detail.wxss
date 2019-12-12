@@ -1,0 +1,76 @@
+page {
+  height: 100%;
+}
+
+.talk {
+  height: 100%;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+.bg image {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 100rpx;
+}
+
+.title view:first-child {
+  font-size: 100rpx;
+  font-weight: bold;
+  font-family: STXingkai;
+}
+
+.title view:last-child {
+  align-self: flex-end;
+  margin-right: 20rpx;
+}
+
+.mainContent {
+  background-color: #ffff;
+  border: 2px solid #d3d3d3;
+  height: 500rpx;
+  width: 100%;
+  margin: 40rpx;
+}
+
+
+
+.startToTalk {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submitImg {
+  height: 100rpx;
+  width: 100rpx;
+  z-index: 1;
+}
+
+.imgShow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: unwrap;
+  border: 2px dotted gold;
+}
+.imgShow image{
+  width:33%;
+  height: 200rpx;
+}

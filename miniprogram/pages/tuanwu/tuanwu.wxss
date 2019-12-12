@@ -1,14 +1,27 @@
+@import "./managers.wxss";
+
 body{
   margin: 0;
   padding: 0;
 }
 
 .swiperClass {
-  margin: 0;
+  margin-top: 70rpx;
   height: 200px;
   width: 100%;
+  background-color: #f6f6f6;
 }
+.lingxinlogo{
+  display:flex;
+  justify-content: center;
 
+  
+}
+.lingxinlogo image{
+  width:300rpx;
+  height:300rpx;
+  border-radius: 50%;
+}
 
 .slide-image {
   width: 90%;
@@ -28,6 +41,7 @@ image.quiet {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid gainsboro;
+  justify-content: space-between;
 }
 
 .menu-item {
@@ -37,7 +51,10 @@ image.quiet {
   flex-direction: column;
   box-sizing: border-box; /*把内边距计算到宽度中去*/
   justify-content: center; /*左右居中*/
+  align-items: center;
 }
+
+
 
 .menu-img {
   width: 80%;
@@ -46,6 +63,9 @@ image.quiet {
 .menu-mc {
   font-size: 14px;
   align-self: center;
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
 }
 
 .message {

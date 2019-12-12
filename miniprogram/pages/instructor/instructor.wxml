@@ -1,0 +1,81 @@
+<navigator-custom title="小程序使用指南" />
+
+
+<view class="title" style="margin-top:40rpx;">
+  <text>小程序使用指南</text>
+</view>
+
+<view>
+
+  <view class="line">
+    <view class="pailie-title">积分功能</view>
+    <view class="content">
+      <view class="pailie-content">
+        <text>1.每次向树洞扔进一个问题获得5新宝</text>
+      </view>
+      <view class="pailie-content">
+        <text>2.首次登录获得10新宝</text>
+      </view>
+      <view class="pailie-content">
+        <text>3.反馈问题获得10新宝</text>
+      </view>
+      <view class="pailie-content">
+        <text>4.查看树洞扣除5新宝</text>
+      </view>
+      <view class="pailie-content">
+        <text>5.获取学习资料每项扣除5新宝</text>
+      </view>
+      <view class="pailie-content">
+        <text>6.对组织有特殊贡献视情况奖励</text>
+      </view>
+      <view class="pailie-content">
+        <text>7.新宝达到一定数量赠送小礼品</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="line">
+    <view class="pailie-title">树洞功能</view>
+    <view class="content">
+      <view class="pailie-content">
+        <text>1.每次倾诉问题可以上传3张图片</text>
+      </view>
+      <view class="pailie-content">
+        
+        <text>2.可以选择聆听自己的树洞</text>
+      </view>
+      <view class="pailie-content">
+        <text>3.可以选择聆听他人的树洞</text>
+      </view>
+      <view class="pailie-content">
+        <text>4.树洞可以在我的界面选择匿名或实名</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="line">
+    <view class="pailie-title">团务功能</view>
+    <view class="content">
+      <view class="pailie-content">
+        <text>1.团员证补办提交了信息之后就不用递交纸质版申请</text>
+      </view>
+      <view class="pailie-content">
+        
+        <text>2.可以咨询人事部成员</text>
+      </view>
+      <view class="pailie-content">
+        <text>3.可以查看入团流程</text>
+      </view>
+      <view class="pailie-content">
+        <text>4.可以下载入团所需要的文件</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom" style="margin-top:200rpx;">
+  <text>推陈出新，携手并进</text>
+  <bottom-title class="bottom-title" />
+</view>
+
+

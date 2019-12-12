@@ -1,48 +1,139 @@
-body{
-  margin: 0;
-  padding: 0;
-}
-.personalTitle{
-  font-weight: bolder;
-  text-align: center;
-  margin-top: 25px;
-  font-size: 50rpx;
-  color: #f7982a;
-}
-.userImage{
-  text-align: center;
-  position: relative;
-  
+/* 隐藏滚动条 */
+@import './swiper2.wxss';
+@import './swiper4.wxss';
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
 
-.U_Image{
-  height: 300rpx;
-  width: 300rpx;
-  display:block;
-  overflow: hidden;
-	border-radius:50%;
-  margin:0 auto;
-  margin-top:25rpx;
+.tapNav {
+  /*background-color:	#98FB98;*/
+  height: 280rpx;
 }
-.username{
-  width: 100%;
-  border-radius: 50%;
-  margin: 0 auto;
+
+
+.person {
+  background-color: #ffff;
+  margin: 20rpx;
+  border: 2px double #d3d3d3;
+}
+
+.userImg {
+  width: 125rpx;
+  height: 125rpx;
   display: inline-block;
+  margin-top: -15rpx;
+  margin-left: 20rpx;
 }
 
-.personalDetail{
-  font-size: 32rpx;
-  width: 400rpx;
-  margin: 50rpx auto;
+.nickName {
+  display: inline-block;
+  font-size: 22rpx;
+  margin-left: 10rpx;
+  margin-top: -30rpx;
+  line-height: 16rpx;
 }
-.personalDetail view{
-  text-align: left;
-  padding: 10rpx 0;
-  color: #f7982a;
+
+.tips {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personalQus {
+  display: inline-block;
+  width: 48%;
+  border-right: 1px solid #d3d3d3;
+  font-size: 22rpx;
+  color: #d3d3d3;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.introduce {
+  display: inline-block;
+  width: 48%;
+  font-size: 22rpx;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.my_lingxin {
+  background-color: #ffff;
+  margin: 20rpx;
+  border: 1px double #d3d3d3;
+  box-shadow: 1px 1px #d3d3d3;
+}
+
+.swiper {
+  height: 850rpx;
+}
+
+.mycredit {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.creditImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+  height: 300rpx;
+  width: 750rpx;
+  position: relative;
 }
 
 
-.popup{
-  background-color:black
+
+.myProblem {
+  height: 400rpx;
+  width: 100%;
+}
+
+.content {
+  font-size: 30rpx;
+  margin: 20rpx 0;
+}
+
+.problems {
+  box-shadow: 10px 10px 5px #888;
+  border-bottom: 1px double gold;
+  background-color: #fffacd;
+  box-sizing: border-box;
+  margin: 20rpx;
+}
+
+.right {
+  float: right;
+  position: absolute;
+  margin-top: -130rpx;
+  margin-left: 490rpx;
+}
+
+.answers {
+  box-shadow: 10px 10px 5px #888;
+  border-bottom: 1px double gold;
+  background-color: #fffacd;
+  box-sizing: border-box;
+  margin: 20rpx;
+}
+
+.type {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40rpx;
+  text-shadow: 5px 5px 5px #fff;
+}
+
+.time {
+  font-size: 22rpx;
+  color: #696969;
+}
+
+.bottom-title {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

@@ -1,0 +1,31 @@
+.managerContainer{
+  border:1px solid	#C0C0C0;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 5px #888888;
+}
+.leftarea{
+  width: 30%;
+  float: left;
+  
+}
+.leftarea image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+
+}
+
+.consultTitle{
+  text-align: center;
+  font-weight: bold;
+  font-size: 40rpx;
+  text-shadow:5px 5px 5px #fff;
+  font-family: SimSun;
+}
+
+.ps{
+  color: 	#696969;
+  text-align: center;
+
+}

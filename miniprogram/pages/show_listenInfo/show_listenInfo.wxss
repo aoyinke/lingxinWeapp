@@ -1,0 +1,45 @@
+@import './running.wxss';
+
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.bg {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
+.bg image {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+
+}
+
+
+.mainContent{
+width:100%;
+display: flex;
+z-index: 1;
+justify-content: center;
+word-break:break-all;
+align-content: center;
+
+}
+
+.mainContent-text{
+box-sizing: border-box;
+font-weight: bold;
+font-size: 30rpx;
+color: #535353;
+padding: 20rpx;
+text-align: center;
+display: block;
+width: 70%;
+  
+
+}

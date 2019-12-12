@@ -1,31 +1,120 @@
-<navigator-custom title="领新风采"/>
+<navigator-custom title="领新风采" />
 <view class="changeTab">
   <view class="tab-item {{item==0 ? 'active':''}}" bindtap="changeItem" data-item="0">风采展示</view>
   <view class="tab-item {{item==1 ? 'active':''}}" bindtap="changeItem" data-item="1">领新小课堂</view>
+  <view class="tab-item {{item==2 ? 'active':''}}" bindtap="changeItem" data-item="2">成为讲师</view>
 </view>
-<swiper current="{{item}}">
-  <swiper-item>
-  <scroll-view class="content-info" scroll-y>
-    <view class="exhibition-title">
-      <text>年时系马醉流霞</text>
-    </view>
-    <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
-      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-        <swiper-item class="slide-item">
-          <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
-          </image>
-        </swiper-item>
+<view class="swiper-father">
+  <swiper current="{{item}}" bindchange="handleChange">
+    <swiper-item>
+      <scroll-view class="content-info" scroll-y>
+        <view class="exhibition-title">
+          <text>年时系马醉流霞</text>
+        </view>
+        <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+          <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item class="slide-item">
+              <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+              </image>
+            </swiper-item>
+          </block>
+        </swiper>
+
+        <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+          <block wx:for="{{huiyi}}" wx:key="{{index}}">
+            <swiper-item class="slide-item">
+              <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+              </image>
+            </swiper-item>
+          </block>
+        </swiper>
+
+
+
+
+
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+
+      <block wx:for="{{teacherInfo}}" wx:key="{{index}}">
+        <view class="container">
+          <view class="lessontitle">
+            {{item.lessonTitle}}
+          </view>
+          <view class="left-teacher">
+            <view class="grade">{{item.grade}}</view>
+            <view class="teacherImg">
+              <image src="{{item.teacherImg}}" style="border-radius:50%;"></image>
+            </view>
+            <view class="teacherName">
+              {{item.teacherName}}
+            </view>
+          </view>
+          <view class="right-teacher">
+
+            <view class="lessonIntro">
+              <view style="font-weight:bold;">课程简介:</view>
+              <view style="border-bottom:1px solid #A9A9A9;">{{item.lessonIntro}}</view>
+            </view>
+            <view class="lessonRoom" style="margin:20rpx 0;">
+              上课地点：{{item.lessonRoom}} 上课时间:{{item.lessonTime}}
+            </view>
+            <view class="lastingTime" style="margin:20rpx 0;">
+              课长时间:{{item.lasting}}
+            </view>
+            <view class="personNum" style="margin:20rpx 0;">
+              <text>人数：{{item.yibaoming}}</text>
+              <text>/{{item.totalNum}}</text>
+              <text style="color:red; margin-left:60rpx;" wx:if="{{singal}}">报名截止</text>
+            </view>
+          </view>
+          <view class="register">
+            <van-button plain hairline type="info" bindtap="handleRegister" data-lessonTitle="{{item.lessonTitle}}" data-lessonId="{{item._id}}" size="large" icon="like">我要报名</van-button>
+            <van-button plain hairline type="warning" bindtap="handCancel" size="large" icon="clear" data-lessonId="{{item._id}}">取消报名</van-button>
+          </view>
+
+        </view>
       </block>
-    </swiper>
+    </swiper-item>
+    <swiper-item>
+      <van-notice-bar text="提交成功后，会有专人审核并联系您面试，我们非常欢迎您的加入！">
+        <text slot="left-icon">[提交说明]</text>
+        <text slot="right-icon">[提交说明]</text>
+      </van-notice-bar>
+      <view class="teacherSubmit">申请成为讲师</view>
+      <view class="sumitInfo">
+        <form bindsubmit='formSubmit'>
+          <view class="habbits input">
+            <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/techang.png?sign=6273df2781893b6fa053690badd91edb&t=1573718339"></image>
+            <input placeholder="你的特长(2-3个)" name="outperform" value='{{form_info}}' />
+          </view>
+          <view class="habbits input">
+            <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/xuehao.png?sign=45260133b5d775200ac2f9b12b483998&t=1573718635"></image>
+            <input class="" auto-focus placeholder="你的学号" type="number" maxlength="12" name="stuid" value='{{form_info}}' />
+          </view>
+          <view class="habbits input">
+            <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/banji.png?sign=df63ebb85da6bdf125f3778a85b8f8a3&t=1573718362"></image>
+            <input class="" auto-focus placeholder="你的行政班级（如管理182)" maxlength="5" name="classInfo" value='{{form_info}}' />
+          </view>
+          <view class="habbits textarea">
+            <textarea auto-focus placeholder="自我介绍,讲一下自己的兴趣爱好，为人，成就等等" bindinput="introduction" value='{{form_info}}' />
+          </view>
+          <view class="uploadFile" bindtap="uploadImg">
+            <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/%E4%B8%8B%E8%BD%BD.jpg?sign=20b81c57579186979b2c4cbd8d6f0f29&t=1574178785" style="height:150rpx;width:150rpx;"></image>
+            <view>个人照片</view>
+          </view>
+          <image src="{{showImg}}" style="width:100%;height:300rpx;"></image>
+          <button form-type="submit" type="primary" class="submit">提交申请</button>
+        </form>
+
+      </view>
+
+      <view></view>
+    </swiper-item>
+  </swiper>
+</view>
 
 
-    
-    </scroll-view>
-  </swiper-item>
-
-  <swiper-item>
-    <include src="lesson.wxml" />
-  </swiper-item>
-</swiper>
-
-<image class="bg" src="/images/bg_1.png"></image>
+<image class="bg " src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/activity.jpg?sign=c483efb4d1961ec48b59f59fa9fc6ce0&t=1575193612 "></image>

@@ -1,0 +1,73 @@
+<navigator-custom title="海大树洞">
+</navigator-custom>
+
+<swiper current="{{index}}" bindchange="handleSwiperChange">
+  <swiper-item>
+    <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/shudong1.jpg?sign=907091473927bbcf1919ed01277c7916&t=1574919754" style="height:100%;width:100%;z-index: 0"></image>
+    <view class="title">
+      <view class="first">
+        <text>海大树洞</text>
+      </view>
+      <view class="last">
+        <view>每</view>
+        <view>种</view>
+        <view>情</view>
+        <view>感</view>
+        <view>，</view>
+      </view>
+      <view class="middle">
+        <view>都</view>
+        <view>值</view>
+        <view>得</view>
+        <view>倾</view>
+        <view>诉</view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="changeHole" style="margin-top:35rpx;">
+      <van-button type="info" size="large" bindtap="changeHoleList">换一批</van-button>
+    </view>
+    <view class="hole_list">
+      <view class="user" wx:for="{{userInfo}}" wx:key="{{index}}" data-userOpenid="{{item._openid}}" bindtap="startTalk">
+        <view class="holeImg">
+          <image src="{{item.anonyAvatarUrl ? item.anonyAvatarUrl :item.avatarUrl}}"></image>
+        </view>
+        <view class="nickName">
+          <text>{{item.anonyNickName ? item.anonyNickName:item.nickName}}</text>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class="bottom-block">
+  <view class="bottom-item left {{currentIndex==0 ? 'active':''}}" bindtap="handlePage" data-index="0">
+    <text>树洞</text>
+  </view>
+  <view class="bottom-item center {{currentIndex==1 ? 'active':''}}" bindtap="handlePage" data-index="1">
+    <text>开始倾诉</text>
+  </view>
+  <view class="bottom-item right {{isListening ? 'active':''}}" bindtap="startToListen">
+    <text>聆听</text>
+  </view>
+</view>
+
+
+
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom" closeable close-icon="close" round>
+  <view class="listenChoice">
+    <view class="listenChoice-img">
+      <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/selfshudong.jpg?sign=e1277bea0ea618fcf06662b58ad54bdf&t=1575089922"></image>
+      <image src="https://6765-gengyc-zb5zk-1300303404.tcb.qcloud.la/othersshudong.jpg?sign=a28cb22b599fecdf033e2833f17f4bec&t=1575089489"></image>
+    </view>
+    <view class="listenChoice-button">
+      <view style="width:40%;">
+        <van-button plain hairline type="primary" custom-style="width:100%;" bindtap="listenToSelf">聆听自己的树洞</van-button>
+      </view>
+      <view style="width:58%;">
+        <van-button plain hairline type="primary" custom-style="width:100%;" bindtap="listenToOthers">聆听他人的树洞</van-button>
+      </view>
+    </view>
+  </view>
+</van-popup>

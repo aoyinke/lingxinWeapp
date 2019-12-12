@@ -1,0 +1,47 @@
+@import './bottom-block';
+@import './hole_list';
+
+page{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+swiper{
+  height: 100%;
+}
+swiper-item{
+  height: 100%;
+}
+.active{
+  opacity: 1;
+  color: #F08080;
+  font-weight: bold;
+}
+
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 100rpx;
+  position: fixed;
+  top: 200rpx;
+}
+
+.title .first {
+  font-size: 100rpx;
+  font-weight: bold;
+  font-family: KaiTi;
+}
+
+.title .last {
+  align-self: flex-end;
+  margin-right: 180rpx;
+}
+.middle{
+    align-self: flex-end;
+  margin-right: 220rpx;
+}

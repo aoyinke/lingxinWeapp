@@ -1,0 +1,21 @@
+.footer{
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+
+}
+.teacherSubmit{
+  text-align: center;
+  font-weight: bold;
+  background-color: 	#191970;
+  font-size: 40rpx;
+  color: #fff;
+}
+.sumbit{
+  bottom:0;
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  
+}
